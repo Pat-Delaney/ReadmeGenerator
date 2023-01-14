@@ -1,7 +1,7 @@
 # ReadMe Generator
     
-    ## Description
-    This program takes in user parameters and outputs a readme.md file in a new folder. This mainly functions to cut out the formatting and guesswork of readme writing and make it a more straightforward process.
+## Description
+This program takes in user parameters and outputs a readme.md file in a new folder. This mainly functions to cut out the formatting and guesswork of readme writing and make it a more straightforward process.
     
     ## Table of Contents
 - [Installation](#installation)
