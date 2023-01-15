@@ -33,16 +33,15 @@ function init() {
             name: "install"
         },
         {
+            type:"input",
+            message:userq,
+            name:"user"
+        },
+        {
             type:"list",
             message: githubq,
             name: "github",
             choices: ["Yes","No"]
-        },
-        {
-            type:"input",
-            message:userq,
-            name:"user",
-            when: (answers) => answers.github === 'Yes'
         },
         {
             type:"input",
@@ -69,7 +68,7 @@ function init() {
         {
             type:"list",
             message:licenseq,
-            choices:["MIT","CC","GPL"],
+            choices:["MIT","CC","MPL"],
             name:"license"
         }
     ])
@@ -81,22 +80,26 @@ function init() {
 function generatorFunc(data){
     const {name,desc,install,github,user,repo,screenshot,use,credit,license} = data
     return `# ${name}
+${data[license] === "MIT" ? `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)` : ""}
+${data[license] === "CC" ? `[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)` : ""}
+${data[license] === "MPL" ? `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)` : ""}
     
-    ## Description
-    ${desc}
+## Description
+${desc}
     
-    ## Table of Contents
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Questions](#questions)
 
 ## Installation
 
 ${install}
-
 ## Usage
 ${data[github] ?  `![Screenshot of application](https://github.com/${user}/${repo}/blob/main/${screenshot}?raw=true)`:""}
+    
 ${use}
 
 ## Credits
@@ -106,6 +109,10 @@ ${credit}
 ## License
 
 ${license}
+
+## Questions
+
+Questions can be directed to [My Github](https://github.com/${user} "My Github")
 `
 }
 

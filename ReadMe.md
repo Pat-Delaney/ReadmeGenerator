@@ -18,7 +18,11 @@ This program takes in user parameters and outputs a readme.md file in a new fold
 To install, be sure inquirer is installed using the npm install command and be sure you have node installed. This program was tested and developed using Node v 16.16.0 and may work differently with different versions.
 ## Usage
 
+<<<<<<< HEAD
     
+=======
+![Gif of working app](https://github.com/Pat-Delaney/ReadmeGenerator/blob/main/Untitled.gif)
+>>>>>>> b265699fa745fafc1508b1161ed38688b62c2eae
 The program is used entirely in the command line. Just use the node index.js command to initialize the inquirer prompts, and the readme should be generated at the end.
 
 ## Credits
