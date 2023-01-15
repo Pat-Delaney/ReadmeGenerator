@@ -15,6 +15,7 @@ To install, be sure inquirer is installed using the npm install command and be s
 
 ## Usage
 
+![Gif of working app](https://github.com/Pat-Delaney/ReadmeGenerator/blob/main/Untitled.gif)
 The program is used entirely in the command line. Just use the node index.js command to initialize the inquirer prompts, and the readme should be generated at the end.
 
 ## Credits
